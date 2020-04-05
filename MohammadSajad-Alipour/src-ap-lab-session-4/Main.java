@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -27,7 +28,8 @@ public class Main {
         voter1Choices.add("Cristiano Ronaldo");
         Person voter2=new Person("b","B");
         ArrayList<String> voter2Choices=new ArrayList<>();
-        voter2Choices.add("Lionel Messi");
+        Random random=new Random();
+        voter2Choices.add(choicesVotingNum1.get(random.nextInt(3)));
         Person voter3=new Person("c","C");
         ArrayList<String> voter3Choices=new ArrayList<>();
         voter3Choices.add("Neymar");
