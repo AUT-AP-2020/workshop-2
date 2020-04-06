@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * shape of rectangle.
@@ -12,13 +11,15 @@ public class Rectangle extends Polygon{
      */
     public Rectangle(double... side) {
         super(side);
-        if(side.length!=0)
-            if(side[0] != side[2] || side[1] != side[3]) {
+        if(side.length != 0) {
+            if (side[0] != side[2] || side[1] != side[3]) {
                 System.out.println("this is not a Rectangle.");
                 sides.clear();
             }
+        }
         else
-            System.out.println("this is not a Rectangle.");
+                System.out.println("this is not a Rectangle.");
+
 
     }
 

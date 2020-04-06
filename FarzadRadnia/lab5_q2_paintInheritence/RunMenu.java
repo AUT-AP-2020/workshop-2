@@ -8,6 +8,12 @@ public class RunMenu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Paint paint = new Paint();
+        paint.addShape(new Circle(4.5));
+        paint.addShape(new Triangle(3,3,3));
+        paint.addShape(new Triangle(3,3.5,3));
+        paint.addShape(new Rectangle(4,5,4,5));
+        paint.addShape(new Rectangle(2,2,2,2));
+
         int oper = 10;
         while (oper != 7)
         {

@@ -8,6 +8,12 @@ public class RunMenu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Paint paint = new Paint();
+        paint.addCircle(new Circle(4.5));
+        paint.addTriangle(new Triangle(3,3,3));
+        paint.addTriangle(new Triangle(3,3.5,3));
+        paint.addRectangle(new Rectangle(4,5,4,5));
+        paint.addRectangle(new Rectangle(2,2,2,2));
+
         int oper = 10;
         while (oper != 6)
         {
@@ -144,6 +150,6 @@ public class RunMenu {
                             "3-draw all shapes\n"+
                             "4-draw specific shape of list\n" +
                             "5-find equal shapes like given shape\n"+
-                            "5-exit");
+                            "6-exit");
     }
 }
