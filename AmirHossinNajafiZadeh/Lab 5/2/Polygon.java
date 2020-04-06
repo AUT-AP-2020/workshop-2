@@ -8,7 +8,7 @@ import java.util.Objects;
  * rectangle and triangle.
  *
  */
-public class Polygon extends Shape {
+public abstract class Polygon extends Shape {
     //The list of sides
     protected ArrayList<Double> sides;
 

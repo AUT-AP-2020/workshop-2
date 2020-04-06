@@ -35,12 +35,11 @@ public class Triangle extends Polygon {
 
     @Override
     public void draw() {
-        System.out.print("This Shape Is A Triangle ");
-        super.draw();
+        System.out.printf("This Shape Is A Triangle With The Are Of %.2f And The Perimeter Of %.2f ", calculateArea(), calculatePerimeter());
         if(isEquilateral())
             System.out.print(". This Shape Is A Equilateral Triangle.\n" );
         else
-            System.out.print(".\n");
+            System.out.print("\n");
     }
 
     @Override
