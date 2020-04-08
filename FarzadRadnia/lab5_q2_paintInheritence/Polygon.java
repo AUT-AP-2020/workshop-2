@@ -19,6 +19,48 @@ public abstract class Polygon  extends  Shape{
     }
 
     /**
+     * prints the kind , perimeter and area of this polygon
+     */
+    public  void draw(){
+        boolean isEquilateral = false;
+        boolean isSquare = false;
+
+        if(this instanceof Rectangle)
+            isSquare = ((Rectangle) this).isSquare();
+        if(this instanceof Triangle)
+            isEquilateral = ((Triangle) this).isEquilateral();
+
+        System.out.println(this.getClass().getName()  + (isEquilateral ?" (Equilateral) :":isSquare?" (Square) :":" :") +
+                "  Area: " + calculateArea() + "  perimeter: " + calculatePerimeter());
+    }
+
+    /**
+     * prints kind  and sizes of this shape.
+     * @return make a string that contains kind  and sizes of this shape
+     */
+    @Override
+    public  String toString(){
+        boolean isEquilateral = false;
+        boolean isSquare = false;
+
+        if(this instanceof Rectangle)
+            isSquare = ((Rectangle) this).isSquare();
+        if(this instanceof Triangle)
+            isEquilateral = ((Triangle) this).isEquilateral();
+
+        StringBuilder sSides = new StringBuilder();
+        int counter = 1;
+        for(double side : sides) {
+            sSides.append("   side").append(counter).append(":").append(side);
+            counter ++;
+        }
+
+
+        return (this.getClass().getName()  + (isEquilateral ?" (Equilateral) ...":isSquare?" (Square) ...":" ...") +
+                "  sides: " + sSides);
+    }
+
+    /**
      * calculate the perimeter of this polygon
      * @return perimeter of this polygon
      */

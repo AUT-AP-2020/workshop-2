@@ -35,24 +35,7 @@ public class Rectangle extends Polygon{
         return sides.get(0) * sides.get(1);
     }
 
-    /**
-     * prints the kind , perimeter and area of this rectangle
-     */
-    public void draw()
-    {
-        System.out.println("Rectangle "+ (isSquare()?" (Square) ":"") +":  Perimeter: " + calculatePerimeter() + "  Area: " + calculateArea());
-    }
 
-
-
-    /**
-     * prints kind  and sizes of this rectangle.
-     * @return make a string that contains kind  and sizes of this rectangle
-     */
-    @Override
-    public String toString() {
-        return "Rectangle " + (isSquare()?" (Square) ":"") + " sides:   " + sides.get(0) + "    " + sides.get(1) + "    " + sides.get(2) + "    " + sides.get(3);
-    }
 
     /**
      * get the sides of this rectangle

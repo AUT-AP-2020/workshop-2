@@ -44,27 +44,6 @@ public class Triangle extends Polygon {
         return Math.pow( ( perimeter * (perimeter-sides.get(0)) * (perimeter-sides.get(1)) * (perimeter- sides.get(2)) ) , 0.5);
     }
 
-    /**
-     * prints the kind , perimeter and area of this triangle
-     */
-    public void draw()
-    {
-        System.out.println("Triangle "+ (isEquilateral()?" (equilateral)": "" ) +" :   Perimeter: " + calculatePerimeter() + "  Area: " + calculateArea());
-    }
-
-    /**
-     * return kind  and sizes of this triangle.
-     * @return String that contains kind  and sizes of this triangle
-     */
-    @Override
-    public String toString() {
-        try {
-            return "Triangle "+ (isEquilateral()?" (equilateral)": "" ) +" sides:   " + sides.get(0) + "    " + sides.get(1) + "    " + sides.get(2) ;
-        }catch (IndexOutOfBoundsException e)
-        {
-            return "not valid Triangle";
-        }
-    }
 
 
     /**
