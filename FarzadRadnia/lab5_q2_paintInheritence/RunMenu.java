@@ -68,7 +68,7 @@ public class RunMenu {
         System.out.println("1-circle   2-Triangle   3-rectangle");
         int oper = scanner.nextInt();
         int i = 1;
-        Shape shapeToBeFound = new Shape();
+        Shape shapeToBeFound = new Circle(1);
         switch (oper)
         {
             case 1:
@@ -103,7 +103,7 @@ public class RunMenu {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1-circle   2-Triangle   3-rectangle");
         int oper = scanner.nextInt();
-        Shape shapeToBeAdded = new Shape();
+        Shape shapeToBeAdded = new Circle(1);
         switch (oper)
         {
             case 1:

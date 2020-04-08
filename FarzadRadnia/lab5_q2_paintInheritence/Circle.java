@@ -5,8 +5,6 @@ import java.util.Objects;
  */
 public class Circle extends Shape{
     private double radius;
-    private final double PI = 3.14;
-
 
     /**
      * make a circle by valid radius. if the radius is smaller or equal to 0 , would ignore the action.
@@ -26,7 +24,7 @@ public class Circle extends Shape{
      */
     public double calculatePerimeter()
     {
-        return radius*2*PI;
+        return radius*2*Math.PI;
     }
 
     /**
@@ -35,7 +33,7 @@ public class Circle extends Shape{
      */
     public double calculateArea()
     {
-        return radius*radius*PI;
+        return radius*radius*Math.PI;
     }
 
     /**
@@ -48,7 +46,7 @@ public class Circle extends Shape{
 
     /**
      * make a string that contains kind  of class and radius.
-     * @return
+     * @return string contains kind of shape and radius of circle.
      */
     @Override
     public String toString() {
@@ -72,7 +70,6 @@ public class Circle extends Shape{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Circle)) return false;
-        if( ! super.equals(o)) return false;
         Circle circle = (Circle) o;
         return Double.compare(circle.getRadius(), getRadius()) == 0 ;
     }
@@ -83,6 +80,6 @@ public class Circle extends Shape{
      */
     @Override
     public int hashCode() {
-        return Objects.hash(getRadius(), PI);
+        return Objects.hash(getRadius(), Math.PI);
     }
 }

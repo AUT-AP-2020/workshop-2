@@ -4,7 +4,7 @@ import java.util.Objects;
 /**
  * Polygon shapes.
  */
-public class Polygon  extends  Shape{
+public abstract class Polygon  extends  Shape{
 
     protected ArrayList<Double> sides;
 
@@ -32,25 +32,6 @@ public class Polygon  extends  Shape{
 
 
     /**
-     * prints the kind , perimeter and area of this polygon
-     */
-    public void draw()
-    {
-        System.out.println("unknown polygon");
-    }
-
-
-
-    /**
-     * prints kind  and sizes of this polygon.
-     * @return make a string that contains kind  and sizes of this polygon
-     */
-    @Override
-    public String toString() {
-        return "unknown polygon";
-    }
-
-    /**
      * get the sides of this polygon
      * @return sides of this polygon
      */
@@ -67,7 +48,6 @@ public class Polygon  extends  Shape{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Polygon)) return false;
-        if (!super.equals(o)) return false;
         Polygon polygon = (Polygon) o;
         return getSides().equals(polygon.getSides());
     }

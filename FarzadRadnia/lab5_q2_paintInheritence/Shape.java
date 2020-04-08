@@ -4,50 +4,33 @@ import java.util.Objects;
 /**
  * all shapes that are able to be draw or print int the paint.
  */
-public class Shape {
+public abstract class Shape {
 
-    /**
-     * simple constructor.
-     * @param side sizes depends on shape's kind.
-     */
-
-    public Shape(double... side) { }
 
     /**
      * calculate the perimeter of this shape
      * @return perimeter of this shape
      */
-    public double calculatePerimeter()
-    {
-        return 0;
-    }
+    public abstract  double calculatePerimeter();
 
 
     /**
      * calculate the area of this shape
      * @return area of this shape
      */
-    public double calculateArea()
-    {
-        return 0;
-    }
+    public abstract double calculateArea();
 
     /**
      * prints the kind , perimeter and area of this shape
      */
-    public void draw()
-    {
-        System.out.println("unknown shape");
-    }
+    public abstract void draw();
 
     /**
      * prints kind  and sizes of this shape.
      * @return make a string that contains kind  and sizes of this shape
      */
     @Override
-    public String toString() {
-        return "unknown shape";
-    }
+    public abstract String toString() ;
 
     /**
      * heck these shape to be same.
@@ -55,7 +38,5 @@ public class Shape {
      * @return tru if same else false
      */
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
+    public abstract boolean equals(Object obj);
 }
