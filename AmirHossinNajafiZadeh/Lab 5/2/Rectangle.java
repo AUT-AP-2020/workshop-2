@@ -32,11 +32,12 @@ public class Rectangle extends Polygon {
 
     @Override
     public void draw() {
-        System.out.printf("This Shape Is A Rectangle With The Are Of %.2f And The Perimeter Of %.2f ", calculateArea(), calculatePerimeter());
+        System.out.print("This Shape Is A Rectangle ");
+        super.draw();
         if(isSquare())
             System.out.print(". And It Is A Square.\n");
         else
-            System.out.print("\n");
+            System.out.print(".\n");
     }
 
     @Override

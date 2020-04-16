@@ -44,8 +44,9 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        System.out.printf("This Shape Is A Circle With The Area Of %.2f And Perimeter Of %.2f", calculateArea(), calculatePerimeter());
-        System.out.print("\n");
+        System.out.print("This Shape Is A Circle ");
+        super.draw();
+        System.out.print(".\n");
     }
 
     @Override

@@ -5,27 +5,33 @@ package com.myPack;
  * for all kind of shapes.
  *
  */
-public abstract class Shape {
+public class Shape {
     /**
      * To calculate the perimeter.
      *
      * @return the perimeter
      */
-    public abstract double calculatePerimeter();
+    public double calculatePerimeter(){
+        return 0;
+    }
 
     /**
      * To calculate the area.
      *
      * @return the area.
      */
-    public abstract double calculateArea();
+    public double calculateArea(){
+        return 0;
+    }
 
     /**
      * This method is to show the
      * area and the perimeter of a shape.
      *
      */
-    public abstract void draw();
+    public void draw(){
+        System.out.print("With The Area Of " + calculateArea() + " And The Perimeter Of " + calculatePerimeter());
+    }
 
     @Override
     public boolean equals(Object obj) {
