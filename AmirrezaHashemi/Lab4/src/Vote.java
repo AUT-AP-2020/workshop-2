@@ -1,13 +1,15 @@
 import java.util.Objects;
 
 public class Vote {
-    private Person person ;
+    private Person person;
     private String date;
 
     public Vote(Person person, String date) {
         this.person = person;
         this.date = date;
+
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -4,6 +4,11 @@ public class Person {
     private String fistName;
     private String lastName;
 
+    public Person(String fistName, String lastName) {
+        this.fistName = fistName;
+        this.lastName = lastName;
+    }
+
     public String getFistName() {
         return fistName;
     }
@@ -18,7 +23,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return fistName+' '+lastName;
+        return fistName + ' ' + lastName;
     }
 
     @Override
