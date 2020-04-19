@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38e3b5d1-8af1-40de-bbcc-3f6a67e8d076" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/JalaliCalendar_1_3_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Session 4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Session 4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Voting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VotingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VotingSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +69,7 @@
       <workItem from="1587046341830" duration="5528000" />
       <workItem from="1587111322355" duration="1845000" />
       <workItem from="1587300446446" duration="1715000" />
+      <workItem from="1587324378959" duration="17000" />
     </task>
     <servers />
   </component>
