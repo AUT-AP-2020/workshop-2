@@ -1,9 +1,18 @@
 import java.util.Objects;
 
+/**
+ * The Vote class implants a vote and contains the person who voted and the date of the vote.
+ */
 public class Vote {
     private Person person;
     private String date;
 
+    /**
+     * Instantiates a new Vote.
+     *
+     * @param person the person
+     * @param date   the date
+     */
     public Vote(Person person, String date) {
         this.person = person;
         this.date = date;
@@ -24,10 +33,20 @@ public class Vote {
         return Objects.hash(person, date);
     }
 
+    /**
+     * Gets person.
+     *
+     * @return the person
+     */
     public Person getPerson() {
         return person;
     }
 
+    /**
+     * Gets date.
+     *
+     * @return the date
+     */
     public String getDate() {
         return date;
     }

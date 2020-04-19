@@ -1,6 +1,14 @@
 import java.util.ArrayList;
 
+/**
+ * The Main class runs the program.
+ */
 public class Main {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         VotingSystem votingSystem = new VotingSystem();
         Person p1 = new Person("Amir", "Hashemi");
@@ -13,7 +21,7 @@ public class Main {
         options1.add("Inception");
         options1.add("Pulp Fiction");
         options1.add("Se7en");
-        votingSystem.createVoting("what's your favourite movie", 1, options1);
+        votingSystem.createVoting("what's your favourite movies", 1, options1);
         ArrayList<String> ans = new ArrayList<>();
         ans.add("Inception");
         votingSystem.vote(0, p1, ans);
