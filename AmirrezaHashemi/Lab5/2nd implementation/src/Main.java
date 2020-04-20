@@ -24,5 +24,7 @@ public class Main {
         paint.addShape(tri2);
         paint.drawAll();
         paint.printAll();
+        System.out.println("describeEqualSides");
+        paint.describeEqualSides();
     }
 }
