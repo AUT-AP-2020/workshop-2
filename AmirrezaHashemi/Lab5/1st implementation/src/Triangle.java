@@ -46,7 +46,10 @@ public class Triangle {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Triangle triangle = (Triangle) o;
-        return (calculateArea() == triangle.calculateArea() && calculatePerimeter() == triangle.calculatePerimeter());
+        return (calculateArea() == triangle.calculateArea() &&
+                calculatePerimeter() == triangle.calculatePerimeter()) &&
+                ( sides.get(0).equals(triangle.getSides().get(1)) || sides.get(0).equals(triangle.getSides().get(2)) ||
+                        sides.get(0).equals(triangle.getSides().get(3)));
     }
 
     /**

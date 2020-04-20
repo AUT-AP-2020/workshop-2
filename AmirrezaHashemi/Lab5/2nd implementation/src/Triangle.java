@@ -22,6 +22,16 @@ public class Triangle extends Polygon {
         return (Math.sqrt(Math.abs(p * (p - sides.get(0)) * (p - sides.get(1)) * (p - sides.get(2)))));
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Triangle) {
+            Triangle triangle = (Triangle) o;
+            return (super.equals(o) && (sides.get(0).equals(triangle.getSides().get(1)) || sides.get(0).equals(triangle.getSides().get(2)) ||
+                    sides.get(0).equals(triangle.getSides().get(3))));
+        }
+        return false;
+    }
+
     /**
      * Checks if the triangle is equilateral‬‬.
      *
