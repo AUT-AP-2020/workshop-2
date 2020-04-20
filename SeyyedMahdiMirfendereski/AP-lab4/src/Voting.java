@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+
 /**
  * this class includes type of voting ,question of voting ,voters and list Of Votes To Choices.
  * @author Mahdi Mirfendereski
