@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Objects;
 
+import static java.lang.Math.round;
+
 public class Triangle {
     private ArrayList<Double> sides ;
 
@@ -36,13 +38,14 @@ public class Triangle {
 
     public double calculatePerimeter()
     {
-        return (sides.get(0) + sides.get(1) + sides.get(2));
+
+        return  (sides.get(0) + sides.get(1) + sides.get(2));
 
     }
     public double calculateArea()
     {
         double p = calculatePerimeter()/2;
-       return( Math.sqrt ( p* (p-sides.get(0))* (p-sides.get(1)) *(p-sides.get(2))));
+       return ( Math.sqrt ( p* (p-sides.get(0))* (p-sides.get(1)) *(p-sides.get(2))));
 
     }
     @Override
