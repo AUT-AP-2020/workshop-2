@@ -2,6 +2,10 @@ import java.util.Objects;
 
 /**
  * The Vote class implants a vote and contains the person who voted and the date of the vote.
+ *
+ * @author Amirreza Hashemi
+ * @version 1.0
+ * @since 4/19/2020
  */
 public class Vote {
     private Person person;

@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 /**
  * The VotingSystem class implants a voting system.
+ *
+ * @author Amirreza Hashemi
+ * @version 1.0
+ * @since 4/19/2020
  */
 public class VotingSystem {
 

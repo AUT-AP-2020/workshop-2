@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 /**
  * The Main class runs the program.
+ *
+ * @author Amirreza Hashemi
+ * @version 1.0
+ * @since 4/19/2020
  */
 public class Main {
     /**
@@ -42,18 +46,15 @@ public class Main {
         ans.add("yes");
         votingSystem.vote(1, p1, ans);
         ans.add("no");
-        votingSystem.vote(1,p2,ans); //more than one answer
+        votingSystem.vote(1, p2, ans); //more than one answer
         ans.remove("no");
-        votingSystem.vote(1,p2,ans);
-        votingSystem.vote(1,p3,ans);
+        votingSystem.vote(1, p2, ans);
+        votingSystem.vote(1, p3, ans);
         ans.clear();
         ans.add("rand"); //random choice;
-        votingSystem.vote(1,p4,ans);
+        votingSystem.vote(1, p4, ans);
         votingSystem.printVoting(1);
         votingSystem.printResults(1);
-
-
-
 
 
     }

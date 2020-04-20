@@ -7,6 +7,10 @@ import java.util.Random;
 
 /**
  * The Voting class implants a voting and contains question,choices,type of voting abd voters.
+ *
+ * @author Amirreza Hashemi
+ * @version 1.0
+ * @since 4/19/2020
  */
 public class Voting {
     // for one choice 0 and for multiple choices 1
@@ -18,7 +22,7 @@ public class Voting {
     /**
      * Instantiates a new Voting.
      *
-     * @param type      the type of voting
+     * @param type     the type of voting
      * @param question the question of voting
      */
     public Voting(int type, String question) {

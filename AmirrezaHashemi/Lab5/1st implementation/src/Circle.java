@@ -1,31 +1,61 @@
 import java.util.Objects;
 
+/**
+ * The Circle class implement a circle.
+ *
+ * @author Amirreza Hashemi
+ * @version 1.0
+ * @since 4/19/2020
+ */
 public class Circle {
     private int radius;
 
+    /**
+     * Instantiates a new Circle with given radius.
+     *
+     * @param radius the radius of circle
+     */
     public Circle(int radius) {
         this.radius = radius;
     }
 
-    public double calculatePerimeter()
-    {
-        return (radius*2*3.14);
+    /**
+     * Calculates perimeter of circle.
+     *
+     * @return the double perimeter of circle
+     */
+    public double calculatePerimeter() {
+        return (radius * 2 * 3.14);
 
     }
-    public double calculateArea()
-    {
-        return (radius*radius*3.14);
+
+    /**
+     * Calculates area of circle.
+     *
+     * @return the double area of circle
+     */
+    public double calculateArea() {
+        return (radius * radius * 3.14);
     }
-    public void draw()
-    {
-        System.out.println("Circle : perimeter : "+calculatePerimeter()+" area : "+calculateArea());
+
+    /**
+     * Prints circle's perimeter and area.
+     */
+    public void draw() {
+        System.out.println("Circle : perimeter : " + calculatePerimeter() + " area : " + calculateArea());
     }
+
     @Override
     public String toString() {
         return "Circle : " +
-                "radius=" + radius ;
+                "radius=" + radius;
     }
 
+    /**
+     * Gets radius of circle.
+     *
+     * @return the radius
+     */
     public int getRadius() {
         return radius;
     }

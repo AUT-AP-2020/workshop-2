@@ -2,6 +2,10 @@ import java.util.Objects;
 
 /**
  * The Person class holds first name and last name of a person.
+ *
+ * @author Amirreza Hashemi
+ * @version 1.0
+ * @since 4/19/2020
  */
 public class Person {
     private String fistName;
