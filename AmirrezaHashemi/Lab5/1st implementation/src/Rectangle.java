@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Rectangle {
-    ArrayList<Double> sides;
+    private ArrayList<Double> sides;
 
     public Rectangle(double side1, double side2, double side3, double side4) {
         sides = new ArrayList<>();

@@ -45,7 +45,7 @@ public class Triangle {
     public double calculateArea()
     {
         double p = calculatePerimeter()/2;
-       return ( Math.sqrt ( p* (p-sides.get(0))* (p-sides.get(1)) *(p-sides.get(2))));
+       return ( Math.sqrt ( Math.abs( p* (p-sides.get(0))* (p-sides.get(1)) *(p-sides.get(2)))));
 
     }
     @Override

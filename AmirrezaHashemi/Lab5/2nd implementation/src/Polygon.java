@@ -3,11 +3,15 @@ import java.util.Arrays;
 
 public abstract class Polygon extends Shape {
 
-    ArrayList<Double> sides;
+    protected ArrayList<Double> sides;
     public Polygon(Double... sidesArg)
     {
         sides = new ArrayList<>();
         sides.addAll(Arrays.asList(sidesArg));
+    }
+
+    public ArrayList<Double> getSides() {
+        return sides;
     }
 
     @Override
