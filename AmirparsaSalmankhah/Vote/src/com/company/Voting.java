@@ -28,7 +28,7 @@ public class Voting {
         return voters;
     }
 
-    public HashMap<String, HashSet<Vote>> getPolls() {
+    public HashMap<String, HashSet<Vote>> getChoices() {
         return choices;
     }
 
@@ -62,14 +62,19 @@ public class Voting {
             JalaliCalendar date = new JalaliCalendar();
             HashSet<Vote> votes = this.choices.get(choice);
             votes.add(new Vote(person,date.toString()));
+            System.out.println(person.toString() + " voted to " + choice);
         }
     }
 
     public void printVotes(){
         System.out.println("Vote result: (Choice     Number of votes)");
+        int index = 1;
         for(String choice : choices.keySet()){
             HashSet<Vote> votes = choices.get(choice);
-            System.out.println(choice + " " + votes.size());
+            System.out.println(index + ") " + choice + " " + votes.size());
+            for(Vote v : votes)
+                System.out.println(v.getPerson().toString() + " " + v.getDate().toString());
+            index++;
         }
     }
 }
