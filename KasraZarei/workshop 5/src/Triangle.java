@@ -1,3 +1,11 @@
+/**
+ * <h1>Triangle class</h1>
+ *
+ * @Override toString from object calss
+ * @Override equals from object class
+ * @Override calculateArea from shape
+ * have isEquilateral method to check is special triangle or not
+ */
 public class Triangle extends Polygon {
 
     public Triangle(int a, int b, int c) {

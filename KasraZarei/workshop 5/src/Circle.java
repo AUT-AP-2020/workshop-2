@@ -1,3 +1,12 @@
+/**
+ * <h1>Circle class</h1>
+ *
+ * @Override calculatePerimeter from shape class
+ * @Override calculateArea from shape class
+ * @Override equals from object class
+ * @Override toString form object
+ * this class calculate circle property
+ */
 public class Circle extends Shape {
 
     private int radius;
@@ -10,6 +19,7 @@ public class Circle extends Shape {
         return radius;
     }
 
+    @Override
     public String toString() {
         return " " + String.valueOf(getRadius());
     }
@@ -28,7 +38,7 @@ public class Circle extends Shape {
 
     @Override
     public boolean equals(Object o) {
-        if (((Circle )o).getRadius() == this.getRadius()) {
+        if (((Circle) o).getRadius() == this.getRadius()) {
             return true;
         }
         return false;

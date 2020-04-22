@@ -1,3 +1,11 @@
+/**
+ * <h1>Paint class</h1>
+ * this class saves all shape in arraylist<br>
+ * have drawAll method to print shape perimeter and area<br>
+ * have printAll method to print shape sides<br>
+ * have describeEqualSides method to check shapes are equal or not
+ */
+
 import java.util.ArrayList;
 
 public class Paint {

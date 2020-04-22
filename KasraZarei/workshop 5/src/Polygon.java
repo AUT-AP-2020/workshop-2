@@ -1,3 +1,11 @@
+/**
+ * <h1>Polygon class</h1>
+ * this class is abstrac and can't create object<br>
+ * this class saves all sides in arraylist<br>
+ *
+ * @Override calculaterPerimeter from shape class`1
+ */
+
 import java.util.ArrayList;
 
 public abstract class Polygon extends Shape {
