@@ -1,34 +1,54 @@
 import java.util.ArrayList;
 import java.util.Objects;
 
+/**
+ * This is a class for triangle
+ */
 public class Triangle {
-    private ArrayList<Integer> sides=new ArrayList<>();
+    private ArrayList<Integer> sides = new ArrayList<>();
 
-    public Triangle(int a,int b,int c){
+    public Triangle(int a, int b, int c) {
         sides.add(a);
         sides.add(b);
         sides.add(c);
     }
 
-    public double calculatePerimeter(){
-        double sum=0;
-        for(Integer side:sides){
-            sum+=side;
+    /**
+     * This is a method to calculate Perimeter
+     *
+     * @return
+     */
+    public double calculatePerimeter() {
+        double sum = 0;
+        for (Integer side : sides) {
+            sum += side;
         }
         return sum;
     }
-    public double calculateArea(){
-        double p=calculatePerimeter()/2;
-        double area=p;
-        for(Integer side:sides){
-            area*=(p-side);
+
+    /**
+     * This is a method to calculate Area
+     *
+     * @return
+     */
+    public double calculateArea() {
+        double p = calculatePerimeter() / 2;
+        double area = p;
+        for (Integer side : sides) {
+            area *= (p - side);
         }
         return Math.sqrt(area);
     }
-    public void draw(){
+
+    /**
+     * This is a method to draw a shape
+     *
+     * @return
+     */
+    public void draw() {
         System.out.println(this.getClass().getName());
-        System.out.println("Perimeter = "+calculatePerimeter());
-        System.out.println("Area = "+calculateArea());
+        System.out.println("Perimeter = " + calculatePerimeter());
+        System.out.println("Area = " + calculateArea());
     }
 
 
@@ -36,8 +56,13 @@ public class Triangle {
         return sides;
     }
 
-    public boolean isEquilateral(){
-        if(sides.get(0)==sides.get(1) && sides.get(1)==sides.get(2)){
+    /**
+     * This is a method to check if it is equilateral
+     *
+     * @return
+     */
+    public boolean isEquilateral() {
+        if (sides.get(0) == sides.get(1) && sides.get(1) == sides.get(2)) {
             return true;
         }
         return false;

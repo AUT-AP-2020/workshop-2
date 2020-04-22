@@ -1,23 +1,44 @@
 import java.util.Objects;
 
+/**
+ * This is a class for circle
+ */
 public class Circle {
     private int radius;
 
-    public Circle(int radius){
-        this.radius=radius;
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
-    public double calculatePerimeter(){
-        return 2*Math.PI*radius;
+    /**
+     * This is a method to calculate Perimeter
+     *
+     * @return
+     */
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
     }
-    public double calculateArea(){
-        return Math.PI*radius*radius;
+
+    /**
+     * This is a method to calculate Area
+     *
+     * @return
+     */
+    public double calculateArea() {
+        return Math.PI * radius * radius;
     }
-    public void draw(){
+
+    /**
+     * This is a method to draw a shape
+     *
+     * @return
+     */
+    public void draw() {
         System.out.println(this.getClass().getName());
-        System.out.println("Perimeter = "+calculatePerimeter());
-        System.out.println("Area = "+calculateArea());
+        System.out.println("Perimeter = " + calculatePerimeter());
+        System.out.println("Area = " + calculateArea());
     }
+
     public int getRadius() {
         return radius;
     }
