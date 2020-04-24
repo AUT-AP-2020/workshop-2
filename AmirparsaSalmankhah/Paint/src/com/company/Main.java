@@ -1,5 +1,10 @@
 package com.company;
 
+/**
+ * This is a class for testing our painting.
+ * @author Amirparsa Salmankhah
+ * @version 1.0.0
+ */
 public class Main {
 
     public static void main(String[] args) {
