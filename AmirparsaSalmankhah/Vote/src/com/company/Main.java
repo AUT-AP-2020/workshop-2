@@ -1,11 +1,13 @@
 package com.company;
 
-import ir.huri.jcal.JalaliCalendar;
-
 import java.util.ArrayList;
 
+/**
+ * This is a class for testing voting systems.
+ * @author Amirparsa Salmankhah
+ * @version 1.0.0
+ */
 public class Main {
-
     public static void main(String[] args) {
         VotingSystem vs = new VotingSystem();
         Person p1 = new Person("Amirparsa","Salmankhah");
