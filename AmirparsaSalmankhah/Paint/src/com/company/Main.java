@@ -21,5 +21,7 @@ public class Main {
         paint.drawAll();
         System.out.println();
         paint.printAll();
+        System.out.println();
+        paint.describeEqualSides();
     }
 }

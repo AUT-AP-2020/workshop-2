@@ -24,4 +24,13 @@ public class Paint {
         for(Shape shape : shapes)
             System.out.println(shape);
     }
+
+    public void describeEqualSides(){
+        for(Shape shape : shapes){
+            if(shape instanceof Rectangle && ((Rectangle) shape).isSquare())
+                System.out.println(shape);
+            else if(shape instanceof Triangle && ((Triangle) shape).isEquilateral())
+                System.out.println(shape);
+        }
+    }
 }
