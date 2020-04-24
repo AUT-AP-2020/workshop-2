@@ -4,11 +4,12 @@ import java.security.cert.CollectionCertStoreParameters;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Polygon extends Shape {
+abstract public class Polygon extends Shape {
     //sides
     private ArrayList<Double> sides;
 
     public Polygon(double... sides) {
+        this.sides = new ArrayList<>();
         for (double side : sides)
             this.sides.add(side);
         Collections.sort(this.sides);
