@@ -21,7 +21,7 @@ public class Circle {
      * this method just draws our shape in the console
      */
     public void draw() {
-        System.out.println("Circle with " + calculateArena() + " arena and " + calculatePerimeter() + " perimeter.");
+        System.out.println("Circle with " + calculateArea() + " area and " + calculatePerimeter() + " perimeter.");
     }
 
     public double getRadius() {
@@ -31,7 +31,7 @@ public class Circle {
     /**
      * @return the arena of the shape
      */
-    public double calculateArena() {
+    public double calculateArea() {
         return PI * radius * radius;
     }
 

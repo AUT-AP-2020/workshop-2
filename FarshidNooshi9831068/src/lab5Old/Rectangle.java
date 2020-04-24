@@ -32,13 +32,13 @@ public class Rectangle {
      * @return true if the rectangle is square
      */
     public boolean isSquare() {
-        return sides.get(0) == sides.get(1) && sides.get(1) == sides.get(2) && sides.get(1) == sides.get(3);
+        return sides.get(0).equals(sides.get(1)) && sides.get(1).equals(sides.get(2)) && sides.get(1).equals(sides.get(3));
     }
 
     /**
      * @return the arena of the shape
      */
-    public double calculateArena() {
+    public double calculateArea() {
         for (Double it : sides)
             if (!it.equals(sides.get(0)))
                 return it * sides.get(0);
@@ -59,7 +59,7 @@ public class Rectangle {
      * this method draws our shape
      */
     public void draw() {
-        System.out.print("Rectangle with " + calculateArena() + " arena and " + calculatePerimeter() + " perimeter");
+        System.out.print("Rectangle with " + calculateArea() + " area and " + calculatePerimeter() + " perimeter");
         if (isSquare())
             System.out.println(" its square.");
         else

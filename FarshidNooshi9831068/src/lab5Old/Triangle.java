@@ -30,13 +30,13 @@ public class Triangle {
      * @return true if the triangle is equilateral
      */
     public boolean isEquilateral() {
-        return sides.get(0) == sides.get(1) && sides.get(1) == sides.get(2);
+        return sides.get(0).equals(sides.get(1)) && sides.get(1).equals(sides.get(2));
     }
 
     /**
      * @return the arena of the shape with the heron formula
      */
-    public double calculateArena() {
+    public double calculateArea() {
         double p = calculatePerimeter() / 2;
         return Math.sqrt(p * (p - sides.get(0)) * (p - sides.get(1)) * (p - sides.get(2)));
     }
@@ -55,7 +55,7 @@ public class Triangle {
      * this method draws our shape
      */
     public void draw() {
-        System.out.print("Triangle with " + calculateArena() + " arena and " + calculatePerimeter() + " perimeter");
+        System.out.print("Triangle with " + calculateArea() + " area and " + calculatePerimeter() + " perimeter");
         if (isEquilateral())
             System.out.println(" its equilateral.");
         else
