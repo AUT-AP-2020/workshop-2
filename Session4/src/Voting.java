@@ -38,7 +38,7 @@ public class Voting {
             for(String poll:polls.keySet()){
                 if(vote.equals(poll)){
                     LocalDate time=LocalDate.now();
-                    JalaliCalendar date=new JalaliCalendar(new GregorianCalendar(time.getYear(),time.getMonthValue(),time.getDayOfMonth()));
+                    JalaliCalendar date=new JalaliCalendar();
                     Vote vote1=new Vote(person,date.toString());
                     polls.get(poll).add(vote1);
                 }
@@ -47,7 +47,10 @@ public class Voting {
     }
     public void printVotes(){
         for(String poll:polls.keySet()){
-            System.out.println(poll+": "+polls.get(poll));
+            System.out.println(poll+": ");
+            for (Vote vote:polls.get(poll)){
+                System.out.println(vote.getPerson().getFirstName()+" "+vote.getDate());
+            }
         }
     }
 }

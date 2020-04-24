@@ -21,11 +21,15 @@ public class VotingSystem {
 
     public void getVoting(int voting) {
         System.out.println(votingList.get(voting).getQuestion());
+        int i=1;
         for (String poll : votingList.get(voting).getPolls().keySet()) {
-            System.out.println(poll);
+            System.out.println(i+":"+poll);
+            i++;
+
         }
     }
     public void getResult(int voting){
+        System.out.println("Result:");
         votingList.get(voting).printVotes();
     }
 }
