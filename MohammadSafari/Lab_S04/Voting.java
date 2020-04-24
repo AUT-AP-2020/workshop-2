@@ -16,22 +16,22 @@ public class Voting {
     public final String question;
     private boolean isActive;
     private Set<Person> voters;
-    private Map<String, Set<Vote>> polls;
+    private Map<String, Set<Vote>> choices;
 
     public Voting(int type, String question) {
         this.question = question;
         this.type = type;
         isActive = true;
         voters = new HashSet<Person>();
-        polls = new HashMap<String, Set<Vote>>();
+        choices = new HashMap<String, Set<Vote>>();
     }
 
-    public void createPoll(String poll) {
-        // preventing same polls
-        if (polls.keySet().contains(poll))
+    public void createChoice(String choice) {
+        // preventing same choices
+        if (choices.keySet().contains(choice))
             return;
         Set<Vote> votes = new HashSet<Vote>();
-        polls.put(poll, votes);
+        choices.put(choice, votes);
     }
 
     /**
@@ -44,10 +44,10 @@ public class Voting {
         int count = 0;
         // if voting is still active and voter has not voted yet
         if (isActive && !voters.contains(voter))
-            // checking whether the given poll is authorized
+            // checking whether the given choice is authorized
             for (String choice : choices)
-                if (polls.keySet().contains(choice)) {
-                    polls.get(choice).add(new Vote(voter, new JalaliCalendar().toString()));
+                if (this.choices.keySet().contains(choice)) {
+                    this.choices.get(choice).add(new Vote(voter, new JalaliCalendar().toString()));
                     count++;
                     if (count == type)
                         return;
@@ -62,16 +62,16 @@ public class Voting {
     }
 
     public void printVotes() {
-        for (String poll : polls.keySet())
-            System.out.println(String.format("%30.30s : %d", poll, polls.get(poll).size()));
+        for (String choice : choices.keySet())
+            System.out.println(String.format("%30.30s : %d", choice, choices.get(choice).size()));
 
     }
 
     /**
-     * @return the polls
+     * @return the choices
      */
-    public Map<String, Set<Vote>> getPolls() {
-        return polls;
+    public Map<String, Set<Vote>> getchoices() {
+        return choices;
     }
 
     public void endVoting() {

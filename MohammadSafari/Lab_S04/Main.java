@@ -14,7 +14,7 @@ public class Main {
         Person you = new Person("Mohammad", "Safari");
         Person he = new Person("Amir", "Hamidi");
         VotingSystem test = new VotingSystem();
-        // first voting
+        // first poll
         {
             test.createVoting("are you okay?", 1, new ArrayList<String>() {
                 {

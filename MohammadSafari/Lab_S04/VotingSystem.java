@@ -19,13 +19,13 @@ public class VotingSystem {
      * 
      * @param question
      * @param type
-     * @param polls
+     * @param choices
      */
-    public void createVoting(String question, int type, ArrayList<String> polls) {
+    public void createVoting(String question, int type, ArrayList<String> choices) {
         Voting voting = new Voting(type, question);
-        // creating polls one by one
-        for (String poll : polls)
-            voting.createPoll(poll);
+        // creating choices one by one
+        for (String choice : choices)
+            voting.createChoice(choice);
         votingList.add(voting);
     }
 
@@ -60,12 +60,19 @@ public class VotingSystem {
 
     /**
      * printing result of a index-specified voting
+     * 
      * @param index
      * @return
      */
     public Map<String, Set<Vote>> getResult(int index) {
         Voting voting = getVoting(index);
         voting.printVotes();
-        return voting.getPolls();
+        return voting.getchoices();
+    }
+
+    public void printListOfVoting(){
+        for(Voting poll:votingList){
+            System.out.println(String.format("%d) %30.30s", votingList.indexOf(poll), poll.question));
+        }
     }
 }
