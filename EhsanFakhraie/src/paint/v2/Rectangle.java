@@ -14,8 +14,8 @@ public class Rectangle extends Polygon {
     }
 
     @Override
-    public double calculateArea(Shape shape) {
-        return this.getSides().get(0) * this.getSides().get(1);
+    public double calculateArea() {
+        return 2*(this.getSides().get(0) * this.getSides().get(1));
     }
 
     @Override
@@ -28,5 +28,10 @@ public class Rectangle extends Polygon {
     @Override
     public String toString() {
         return "Rectangle{"+ Arrays.toString(getSides().toArray()) +"}";
+    }
+
+    @Override
+    public String type() {
+        return "Rectangle";
     }
 }

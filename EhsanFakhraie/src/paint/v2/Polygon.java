@@ -15,8 +15,8 @@ public abstract class Polygon extends Shape {
     }
 
     @Override
-    public double calculatePerimeter(Shape shape) {
-        Polygon p=(Polygon) shape;
+    public double calculatePerimeter() {
+        Polygon p=(Polygon) this;
         double perimeter=0;
         for(Double d:sides)
             perimeter+=d;
