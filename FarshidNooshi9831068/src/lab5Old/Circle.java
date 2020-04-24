@@ -4,8 +4,8 @@ package lab5Old;
 
 import java.util.Objects;
 
-public class Circle extends Paint {
-    private static final double pi = 3.14159265;
+public class Circle {
+    private static final double PI = 3.14159265;
     private final double radius;
 
     /**
@@ -32,14 +32,14 @@ public class Circle extends Paint {
      * @return the arena of the shape
      */
     public double calculateArena() {
-        return pi * radius * radius;
+        return PI * radius * radius;
     }
 
     /**
      * @return the perimeter of the shape
      */
     public double calculatePerimeter() {
-        return 2 * pi * radius;
+        return 2 * PI * radius;
     }
 
     /**

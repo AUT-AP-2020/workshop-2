@@ -1,0 +1,7 @@
+// In The Name Of GOD
+
+package lab5New;
+
+public class Triangle extends Polygon {
+
+}

@@ -5,7 +5,7 @@ package lab5Old;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Rectangle extends Paint {
+public class Rectangle {
     private ArrayList<Double> sides;
 
     /**

@@ -4,9 +4,8 @@ package lab5Old;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.concurrent.TransferQueue;
 
-public class Triangle extends Paint {
+public class Triangle {
     private ArrayList<Double> sides;
 
     /**
