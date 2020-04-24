@@ -1,4 +1,5 @@
 // In The Name Of GOD
+package lab4;
 
 public class Person {
     private final String firstName, lastName;
