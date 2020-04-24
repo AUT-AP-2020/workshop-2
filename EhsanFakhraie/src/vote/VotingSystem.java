@@ -7,7 +7,7 @@ public class VotingSystem {
     private ArrayList<Voting> votingList;
 
     public VotingSystem(){
-
+        votingList=new ArrayList<>();
     }
 
     public void createVoting(String question,int type){

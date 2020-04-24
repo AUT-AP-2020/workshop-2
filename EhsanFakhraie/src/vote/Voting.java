@@ -31,23 +31,34 @@ public class Voting {
     }
 
     public String getNowData() {
-        TimeZone tz = TimeZone.getTimeZone("GMT+9:00");
-        Locale loc = new Locale("ja", "JP", "JP");
-        Calendar calendar = Calendar.getInstance(loc);
-        GregorianCalendar gc = (GregorianCalendar) calendar;
-        JalaliCalendar jc = new JalaliCalendar(gc);
-        return jc.toString();
+        JalaliCalendar jalaliDate = new JalaliCalendar(new GregorianCalendar(2016, 4, 16));
+        return jalaliDate.toString();
     }
 
     public void vote(Person p, ArrayList<String> votes) {
-        for (String v : votes) {
+        if(type==0){
+            for (String v : votes) {
+                if (choices.contains(v)) {
+                    Vote vote = new Vote(p, getNowData());
+                    HashSet<Vote> vs = polls.get(v);
+                    vs.add(vote);
+                    polls.replace(v, vs);
+                }else {
+                    System.out.println("wrong vote");
+                }
+            }
+        }else{
+            String v=votes.get(0);
             if (choices.contains(v)) {
                 Vote vote = new Vote(p, getNowData());
                 HashSet<Vote> vs = polls.get(v);
                 vs.add(vote);
                 polls.replace(v, vs);
+            }else {
+                System.out.println("wrong vote");
             }
         }
+
     }
 
     public int getType() {

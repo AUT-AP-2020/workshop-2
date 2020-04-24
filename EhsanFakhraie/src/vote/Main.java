@@ -13,7 +13,11 @@ public class Main {
 
             Person person=new Person(sc.nextLine(),sc.nextLine());
             ArrayList<String> votes=new ArrayList<>();
-            votes.add("1");
+        votes.add("1");
+        votes.add("1");
+        votes.add("1");
+        votes.add("1");
+        votes.add("2");
             votingSystem.vote(0,person,votes);
 
             votingSystem.getVoting(0).printResult();
