@@ -1,0 +1,19 @@
+public static void main(String[] args) {
+        Circle circle1 = new Shape(19);
+        Shape circle2 = new Circle(3);
+        Triangle rect1 = new Triangle(1,4,1);
+        Polygon rect2 = new Rectangle(8,5,8,5);
+        Rectangle rec3 = new Shape(6,6,6,6);
+        Polygon tri1 = new Triangle(2,2,2);
+        Triangle tri2 = new Triangle(4,4,6);
+        Shape tri3 = new Triangle(2,2,2);
+
+        circle1 = (Circle) circle2;
+        rect2 = rec3;
+        tri1 = (Polygon) tri3;
+        circle2 = tri3;
+        tri3 = tri2;
+
+        rec3 = new Shape(2,3,2);
+        System.out.println(rec3);
+    }
