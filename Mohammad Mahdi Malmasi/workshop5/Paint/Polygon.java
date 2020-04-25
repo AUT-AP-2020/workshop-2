@@ -98,4 +98,22 @@ public class Polygon extends Shape
 
         return true;
     }
+    
+    
+    /**
+     * @return the lenght of the sides in a {@code String}
+     */
+    @Override
+    public String toString() 
+    {
+        String output = "";
+        int numberOfSide = 1;
+       
+        for(double side : sides)
+        {
+         m += "side" + n +": "+ side + ", ";
+         n++;
+        }
+        return m;
+    }
 }
