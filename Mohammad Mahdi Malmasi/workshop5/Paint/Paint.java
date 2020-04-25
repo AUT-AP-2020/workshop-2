@@ -63,4 +63,37 @@ public class Paint
         for(Shape shape : shapes)
             System.out.println(shape.getClass() + ": " + shape.toString());
     }
+            
+      
+    /**
+     * This method find squares and equilateral triangles
+     */
+    public void describeEqualSides()
+    {
+        for (Shape shape : shapes)
+        {
+            // check square cases
+            if(shape instanceof Rectangle)
+            {
+              // cast the object
+              Rectangle rectangle = (Rectangle) shape;
+                        
+              // check that it is a square or not
+              if(rectangle.isSquare())
+                 System.out.println(rectangle.toString());
+            }
+            
+            // check equilateral triangle
+            if(shape instanceof Triangle)
+            {
+                // cast the object
+                Triangle triangle = (Triangle) shape;
+                    
+                // check that it is a equilateral triangle or not
+                if(triangle.isEquilateral())
+                  System.out.println(triangle.toString());
+            }
+        }
+
+    }
 }
